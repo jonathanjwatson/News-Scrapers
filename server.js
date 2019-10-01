@@ -46,8 +46,9 @@ db.once("open", function (){
 })
 //Set up Express Router
 var router = express.Router();
+const htmlController = require('./controllers/htmlController');
 
-app.use(router);
+app.use(htmlController);
 // Start the server
 app.listen(PORT, function() {
   console.log("App running on port " + PORT + "!");
